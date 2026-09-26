@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campus Event Management</title>
+    <meta name="description"
+        content="A simple campus event management system for students to view and register for events.">
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="theme-dark.css">
+    <meta property="og:title" content="Campus Event Management System">
+    <meta property="og:description"
+        content="A simple campus event management system for students to view and register for events.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header id="home" class="header">
+        <h1 class="header-title">Campus Event Management System</h1>
+        <p>Welcome to Our Event Website</p>
+    </header>
+
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#registration">Registration</a>
+    </nav>
+
+    <main>
+        <section class="event-banner">
+            <h2>College Annual Fest 2026</h2>
+            <p>Join us for music, dance, coding, sports, and fun activities!</p><span lang="hi">आपका स्वागत है</span>
+            <br><a href="#registration">Register Now</a>
+        </section>
+
+
+
+        <section id="events">
+
+            <h2>Our Events</h2><br>
+
+            <article>
+                <h3>Coding Competition</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500"
+                        alt="Coding Competition" width="250">
+                    <figcaption>Students participating in the Coding Competition.</figcaption>
+                </figure>
+                <p>Show your programming skills and solve exciting coding challenges.</p>
+            </article>
+            
+            <article>
+                <h3>Dance Show</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500" alt="Dance Show"
+                        width="250">
+                    <figcaption>Students performing in the Dance Show.</figcaption>
+                </figure>
+                <p>Enjoy exciting dance performances by talented students.</p>
+            </article>
+            
+            <article>
+                <h3>Sports Events</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500" alt="Sports Events"
+                        width="250">
+                    <figcaption>Students participating in Sports Events.</figcaption>
+                </figure>
+                <p>Participate in fun and exciting sports activities.</p>
+            </article>
+            
+            <article>
+                <h3>Tech Nova</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="Tech Nova"
+                        width="250">
+                    <figcaption>Students participating in Tech Nova.</figcaption>
+                </figure>
+                <p>A technical fest featuring interesting technology activities.</p>
+
+            </article>
+            
+            <article>
+                <div>
+                    <h3>Robo Race</h3>
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500" alt="Robo Race"
+                            width="250">
+                        <figcaption>Students participating in the Robo Race.</figcaption>
+                    </figure>
+                    <p>A robotics competition where robots compete in an exciting race.</p>
+                </div>
+            </article>
+            <article>
+                <h3>Music Competition</h3>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+                        alt="Music Competition" width="250">
+
+                    <figcaption>
+                        Students participating in the Music Competition.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Showcase your singing and musical talents in an exciting competition.
+                </p>
+            </article>
+
+        </section>
+
+
+        <!-- Assignment 2.2: Submit an Event -->
+        <section class="form-section">
+            <h2>Submit an Event</h2>
+
+            <form action="#" method="get">
+                <label for="event-name"><b>Event Name</b></label><br>
+                <input id="event-name" type="text" name="event-name" placeholder="Enter event name" required><br><br>
+
+                <label for="event-date"><b>Date</b></label><br>
+                <input id="event-date" type="date" name="event-date" required><br><br>
+
+                <label for="event-location"><b>Location</b></label><br>
+                <input id="event-location" type="text" name="event-location" placeholder="Enter event location"
+                    required><br><br>
+
+                <label for="event-description"><b>Description</b></label><br>
+                <textarea id="event-description" name="event-description" rows="4"
+                    placeholder="Enter event description"></textarea><br><br>
+
+                <button type="submit">Add Event</button>
+            </form>
+        </section>
+        <h2 class="campus-event">Campus Event Management System</h2><br>
+
+        <section class="campus-system">
+            <h2 class="about-campus">About Our Campus Events</h2>
+            <br>
+            <section>
+                <h3 calss="why-campus">Why Attend Campus Events?</h3>
+                <p>
+                    Campus events provide students with opportunities to learn new skills,
+                    meet new people, participate in competitions, and enjoy creative activities.
+                </p>
+            </section>
+            <br>
+
+            <section>
+                <h3>Event Highlights</h3>
+                <p>
+                    Our annual fest includes coding competitions, cultural performances,
+                    sports activities, technical events, and robotics competitions.
+                </p>
+            </section>
+        </section>
+        <br>
+        <section class="campus-system">
+            <h2 class="about-campus">Event Information</h2>
+
+            <section>
+                <h3>Registration Details</h3>
+                <p>
+                    Students can register for their preferred events using the registration form.
+                </p>
+            </section><br>
+
+            <section>
+                <h3>Event Schedule</h3>
+                <p>
+                    Check the event schedule to know the date, time, and venue of each activity.
+                </p>
+            </section>
+        </section>
+
+        <!-- Table -->
+        <section>
+            <h2 class="Event-Schedule">Event Schedule</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Coding Competition</td>
+                        <td>20 August</td>
+                        <td>10:00 AM</td>
+                        <td>Lab 1</td>
+                    </tr>
+                    <tr>
+                        <td>Dance Show</td>
+                        <td>21 August</td>
+                        <td>5:00 PM</td>
+                        <td>Auditorium</td>
+                    </tr>
+                    <tr>
+                        <td>Sports Events</td>
+                        <td>22 August</td>
+                        <td>9:00 AM</td>
+                        <td>Sports Ground</td>
+                    </tr>
+                    <tr>
+                        <td>Robo Race</td>
+                        <td>23 August</td>
+                        <td>11:00 AM</td>
+                        <td>Open Arena</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form -->
+        <section id="registration" class="form-section">
+            <h2>Event Registration Form</h2>
+
+            <form action="register.html" method="get">
+                <label for="name"><b>Student Name</b></label><br>
+                <input id="name" class="form-input" type="text" name="name" placeholder="Enter your name"
+                    required><br><br>
+
+                <label for="email"><b>Email</b></label><br>
+                <input id="email" class="form-input" type="email" name="email" placeholder="Enter your email"
+                    required><br><br>
+
+                <label for="event"><b>Select Event</b></label><br>
+                <select id="event" class="form-input" name="event">
+                    <option>Coding Competition</option>
+                    <option>Dance Show</option>
+                    <option>Sports Events</option>
+                    <option>Tech Nova</option>
+                    <option>Robo Race</option>
+                    <option>Other</option>
+                </select><br><br>
+
+                <label for="message"><b>Message</b></label><br>
+                <textarea id="message" class="form-input" name="message" rows="4"
+                    placeholder="Any message..."></textarea><br><br>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section class="extra-info">
+            <h2 class="useful-event">Useful Event Information</h2>
+
+            <h3>Important Notice</h3>
+            <p>
+                <mark>Registration closes soon!</mark> Make sure to register before the deadline.
+            </p>
+            <br>
+
+            <h3>Technical Event</h3>
+            <p>
+                The <abbr title="Artificial Intelligence">AI</abbr> workshop will introduce
+                students to basic concepts of artificial intelligence.
+            </p>
+            <br>
+
+            <h3>Coding Instructions</h3>
+            <p>
+                Use the <code>printf()</code> function to display output in a C program.
+            </p>
+            <br>
+
+            <h3>Keyboard Shortcut</h3>
+            <p>
+                Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your project.
+            </p>
+            <br>
+
+            <h3>Event Reference</h3>
+            <p>
+                Recommended reading: <cite>Introduction to Programming</cite>.
+            </p>
+            <br>
+
+            <h3>System Message</h3>
+            <p>
+                After successful registration, the system may display:
+                <samp>Registration Successful!</samp>
+            </p>
+            <br>
+            <address>
+                Contact: campus.events@example.com<br>
+                Campus Event Management Office<br>
+                College Main Building
+            </address>
+
+            <br>
+            <details>
+                <summary>More Information</summary>
+                <p>
+                    For more details about the events, please visit our official website or contact the event
+                    coordinators.
+                </p>
+            </details>
+        </section>
+
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#events">Events</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#registration">Registration</a>
+        </nav>
+        <p>© 2026 Campus Event Management System</p>
+        <time datetime="2026-09-08"> 8 September 2026</time>
+    </footer>
+
+</body>
+
+</html>

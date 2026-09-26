@@ -1,0 +1,46 @@
+ Team Leader - Apoorva Soni (20261651020)
+ Member 1 - Diya Koshtha (20261651035)
+ member 2 - Kanishka Soni (20261651047)
+ 
+
+Report on HTML Website Enhancements
+
+1. Features Added
+
+1.1 Event Images
+
+Relevant images have been added to the Events section for each listed event. These images provide a visual representation of the activities and make the webpage more attractive and user-friendly.
+
+1.2 Event Descriptions
+
+A brief description has been provided for each event. The descriptions help visitors understand the purpose and nature of the respective activities.
+
+1.3 Unordered List Structure
+
+The Events section continues to use an unordered list (<ul>) with individual events organized using list items (<li>). This keeps the HTML structure simple and easy to understand.
+
+1.4 Event form
+
+new Event Submission Form has been added to the website using the HTML <form> tag. The form allows users to submit details of a new event by entering the Event Name, Date, Location, and Event Description. Each field has an appropriate HTML input element and label to make the form easy to understand and use. The required attribute is used for important fields so that users cannot submit the form without providing the necessary information. Finally, an Add Event button has been included to submit the entered details. The form has been created using basic HTML elementsj
+
+
+2. Existing Features Preserved
+
+The following existing components have been retained without unnecessary changes:
+
+- Website header and navigation menu
+- College Annual Fest banner
+- Event submission form
+- Event schedule table
+- Event registration form
+- Footer section
+- Existing website content and structure
+
+3. Technologies Used
+
+- HTML5 – Used to structure the website and organize event content.
+- Images – Added to provide visual information about the events.
+
+4. Conclusion
+
+The website has been improved by adding event images and informative descriptions while maintaining the original structure and functionality. The implementation uses simple HTML and minimal CSS, making the updated website easy to understand, maintain, and present as an academic assignment.
