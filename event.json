@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Coding Competition",
+        "date": "2026-11-10",
+        "seats": 10,
+        "online": false
+    },
+    {
+        "title": "Dance Show",
+        "date": "2026-11-12",
+        "seats": 0,
+        "online": false
+    },
+    {
+        "title": "Sports Events",
+        "date": "2026-11-15",
+        "seats": 3,
+        "online": false
+    },
+    {
+        "title": "Tech Nova",
+        "date": "2026-11-18",
+        "seats": 20,
+        "online": true
+    },
+    {
+        "title": "Robo Race",
+        "date": "2026-11-20",
+        "seats": 4,
+        "online": false
+    },
+    {
+        "title": "Music Competition",
+        "date": "2026-11-22",
+        "seats": 15,
+        "online": false
+    }
+]
