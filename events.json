@@ -1,38 +1,50 @@
 [
     {
+        "id": 1,
         "title": "Coding Competition",
         "date": "2026-11-10",
         "seats": 10,
+        "free": true,
         "online": false
     },
     {
+        "id": 2,
         "title": "Dance Show",
         "date": "2026-11-12",
         "seats": 0,
+        "free": true,
         "online": false
     },
     {
+        "id": 3,
         "title": "Sports Events",
         "date": "2026-11-15",
         "seats": 3,
+        "free": false,
         "online": false
     },
     {
+        "id": 4,
         "title": "Tech Nova",
         "date": "2026-11-18",
         "seats": 20,
+        "free": false,
         "online": true
     },
     {
+        "id": 5,
         "title": "Robo Race",
         "date": "2026-11-20",
         "seats": 4,
+        "free": false,
         "online": false
     },
     {
+        "id": 6,
         "title": "Music Competition",
         "date": "2026-11-22",
         "seats": 15,
+        "free": false,
         "online": false
     }
 ]

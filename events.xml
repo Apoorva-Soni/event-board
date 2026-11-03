@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event id="1">
+        <title>Coding Competition</title>
+        <date>2026-11-10</date>
+        <seats>10</seats>
+        <free>true</free>
+    </event>
+    <event id="2">
+        <title>Dance Show</title>
+        <date>2026-11-12</date>
+        <seats>0</seats>
+        <free>true</free>
+    </event>
+    <event id="3">
+        <title>Sports Events</title>
+        <date>2026-11-15</date>
+        <seats>3</seats>
+        <free>false</free>
+    </event>
+    <event id="4">
+        <title>Tech Nova</title>
+        <date>2026-11-18</date>
+        <seats>20</seats>
+        <free>false</free>
+    </event>
+</events>

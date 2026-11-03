@@ -532,3 +532,15 @@ figure::before {
         margin: 10px 0;
     }
 }
+
+
+/* Lab Assignment 7: JSON and XML results */
+#data-format-results {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+#data-format-results p {
+    overflow-wrap: anywhere;
+}

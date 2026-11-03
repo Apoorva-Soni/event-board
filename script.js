@@ -170,51 +170,108 @@ searchBox.addEventListener("keydown", function (event) {
 
 // B7: Fetch events from events.json
 
+// Lab Assignment 7: Load JSON and XML data
 async function loadEvents() {
     eventContainer.textContent = "Loading...";
 
     try {
-        const response = await fetch("event.json");
+        // B1: Fetch and read JSON
+        const jsonResponse = await fetch("events.json");
 
-        if (!response.ok) {
-            throw new Error("Failed to load events");
+        if (!jsonResponse.ok) {
+            throw new Error("Failed to load events.json");
         }
 
-        events = await response.json();
+        const jsonText = await jsonResponse.text();
+        events = JSON.parse(jsonText);
 
         console.log("Events loaded:", events);
 
-        // A4: Test event status
-        console.log(getEventStatus(events[0]));
-        console.log(getEventStatus(events[1]));
-        console.log(getEventStatus(events[2]));
+        // B2: Read values using dot and index access
+        console.log("First event title:", events[0].title);
+        console.log(
+            "Last event seats:",
+            events[events.length - 1].seats
+        );
 
-        // A5: Display event status
-        for (const ev of events) {
-            console.log(ev.title + " - " + getEventStatus(ev));
+        // B3: JSON round-trip
+        const jsonString = JSON.stringify(events, null, 4);
+
+        console.log("JSON.stringify output:", jsonString);
+        console.log(
+            "Matches events.json:",
+            jsonString.trim() === jsonText.trim()
+        );
+
+        // B4: Fetch and parse XML
+        const xmlResponse = await fetch("events.xml");
+
+        if (!xmlResponse.ok) {
+            throw new Error("Failed to load events.xml");
         }
 
-        // A6: Test formatEvent function
+        const xmlText = await xmlResponse.text();
+
+        const xmlDocument = new DOMParser().parseFromString(
+            xmlText,
+            "application/xml"
+        );
+
+        if (xmlDocument.querySelector("parsererror")) {
+            throw new Error("Invalid XML");
+        }
+
+        const xmlTitles =
+            xmlDocument.getElementsByTagName("title");
+
+        document.getElementById("xml-first-title").textContent =
+            xmlTitles[0].textContent;
+
+        // B5: Compare file sizes in UTF-8 bytes
+        const jsonBytes =
+            new TextEncoder().encode(jsonText).length;
+
+        const xmlBytes =
+            new TextEncoder().encode(xmlText).length;
+
+        document.getElementById("data-size-result").textContent =
+            `events.json: ${jsonBytes} bytes | ` +
+            `events.xml: ${xmlBytes} bytes. ` +
+            (jsonBytes > xmlBytes
+                ? "JSON is larger."
+                : xmlBytes > jsonBytes
+                    ? "XML is larger."
+                    : "Both files have the same size.");
+
+        // Existing event status functionality
+        for (const ev of events) {
+            console.log(
+                ev.title + " - " + getEventStatus(ev)
+            );
+        }
+
+        // Existing formatEvent functionality
         console.log(formatEvent(events[0]));
         console.log(formatEvent(events[1]));
 
-        // A7: Update available events
-        availableEvents = events.filter(ev => ev.seats > 0);
+        // Existing available events functionality
+        availableEvents = events.filter(
+            ev => ev.seats > 0
+        );
 
-        console.log("Available Events:");
-        console.log(availableEvents);
+        console.log("Available Events:", availableEvents);
 
-        // Render fetched events
+        // Render event cards
         renderEvents();
 
     } catch (error) {
         console.error(error);
-        eventContainer.textContent = "Sorry, events could not be loaded.";
+        eventContainer.textContent =
+            "Sorry, events could not be loaded.";
     }
 }
 
 loadEvents();
-
 
 
  // B8: Registration Form Validation
