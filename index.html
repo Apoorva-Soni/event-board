@@ -197,7 +197,6 @@
             </section>
         </section>
 
-        <!-- Table -->
         <section>
             <h2 class="Event-Schedule">Event Schedule</h2>
 
@@ -239,11 +238,10 @@
             </table>
         </section>
 
-        <!-- Form -->
         <section id="registration" class="form-section">
             <h2>Event Registration Form</h2>
 
-            <form action="register.html" method="get">
+            <form action="#" method="post">
                 <label for="name"><b>Student Name</b></label><br>
                 <input id="name" class="form-input" type="text" name="name" placeholder="Enter your name"
                     required><br><br>
@@ -268,6 +266,22 @@
 
                 <button type="submit">Register</button>
             </form>
+        </section>
+        <!-- Student ID Search Section -->
+        <section id="student-finder">
+            <h2>Find Your Registration Details</h2>
+
+            <input
+                type="text"
+                id="student-id-search"
+                placeholder="Enter your Student ID"
+            >
+
+            <button type="button" id="search-student">
+                Search
+            </button>
+
+            <div id="student-result"></div>
         </section>
 
         <section class="extra-info">
@@ -328,7 +342,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <nav>
             <a href="#home">Home</a> |

@@ -1,4 +1,3 @@
-
 const eventTitle = "Coding Competition";
 const seatsLeft = 10;
 const isOnline = true;
@@ -25,7 +24,7 @@ function getEventStatus(ev) {
     }
 }
 
-// A5: Repeat using for...of loop
+// A5: 
 
 for (const ev of events) {
     console.log(ev.title + " - " + getEventStatus(ev));
@@ -160,7 +159,6 @@ searchBox.addEventListener("input", function () {
     });
 });
 
-// Clear search using Escape
 searchBox.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
         searchBox.value = "";
@@ -250,18 +248,17 @@ async function loadEvents() {
             );
         }
 
-        // Existing formatEvent functionality
+        
         console.log(formatEvent(events[0]));
         console.log(formatEvent(events[1]));
 
-        // Existing available events functionality
+
         availableEvents = events.filter(
             ev => ev.seats > 0
         );
 
         console.log("Available Events:", availableEvents);
 
-        // Render event cards
         renderEvents();
 
     } catch (error) {
@@ -272,26 +269,123 @@ async function loadEvents() {
 }
 
 loadEvents();
+ // B8: Registration Form Submission
 
+registrationForm.addEventListener("submit", async function(event) {
 
- // B8: Registration Form Validation
+    
+    event.preventDefault();
 
-registrationForm.addEventListener("submit", function(event) {
-
-    // Custom validation for name
+    // Custom validation for student name 
     if (studentName.value.trim() === "") {
         studentName.setCustomValidity("Please enter your name");
     } else {
         studentName.setCustomValidity("");
     }
 
-    // Check form validity
+   
     if (!registrationForm.checkValidity()) {
-        event.preventDefault();
         registrationForm.reportValidity();
-    } else {
-        event.preventDefault();
-        alert("Registration form submitted successfully!");
+        return;
+    }
+
+    
+    const studentData = {
+        name: studentName.value.trim(),
+        email: document.getElementById("email").value.trim(),
+        event: document.getElementById("event").value,
+        message: document.getElementById("message").value.trim()
+    };
+
+    try {
+
+        // Send data to server.js
+        const response = await fetch("/api/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(studentData)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            alert(result.message || "Registration failed.");
+            return;
+        }
+
+        alert(
+            "Registration successful!\n" +
+            "Your Student ID is: " +
+            result.student.studentId
+        );
+
+        // Clear form 
+        registrationForm.reset();
+
+    } catch (error) {
+
+        console.error("Registration error:", error);
+
+        alert("Unable to connect to the server. Please try again.");
+
     }
 
 });
+    // C1: Student ID Search
+
+const studentIdInput = document.getElementById("student-id-search");
+const searchStudentButton = document.getElementById("search-student");
+const studentResult = document.getElementById("student-result");
+
+searchStudentButton.addEventListener("click", async function() {
+
+    const studentId = studentIdInput.value.trim();
+
+    if (studentId === "") {
+        studentResult.textContent = "Please enter your Student ID.";
+        return;
+    }
+
+    studentResult.textContent = "Searching...";
+
+    try {
+        const response = await fetch(
+            "/api/student?id=" + encodeURIComponent(studentId)
+        );
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            studentResult.textContent = result.message;
+            return;
+        }
+
+        const student = result.student;
+
+        studentResult.textContent = "";
+
+        const heading = document.createElement("h3");
+        heading.textContent = "Registration Details";
+
+        const id = document.createElement("p");
+        id.textContent = "Student ID: " + student.studentId;
+
+        const name = document.createElement("p");
+        name.textContent = "Name: " + student.name;
+
+        const email = document.createElement("p");
+        email.textContent = "Email: " + student.email;
+
+        const event = document.createElement("p");
+        event.textContent = "Registered Event: " + student.event;
+
+        studentResult.append(heading, id, name, email, event);
+
+    } catch (error) {
+        console.error(error);
+        studentResult.textContent = "Unable to connect to server.";
+    }
+});
+

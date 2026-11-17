@@ -1,0 +1,47 @@
+[
+    {
+        "studentId": "IITV-100001",
+        "name": "Aarav Patel",
+        "email": "aarav@gmail.com",
+        "event": "Coding Competition"
+    },
+    {
+        "studentId": "IITV-100002",
+        "name": "Riya Shah",
+        "email": "riya@gmail.com",
+        "event": "Dance Show"
+    },
+    {
+        "studentId": "IITV-100003",
+        "name": "Apoorva ",
+        "email": "apoorvs@gmail.com",
+        "event": "Sports Competition"
+    },
+    {
+        "studentId": "IITV-100004",
+        "name": " kanishka",
+        "email": "kanishka@gmail.com",
+        "event": "Sports Competition"
+    },
+    {
+        "studentId": "IITV-596367",
+        "name": "Apoorva Soni",
+        "email": "apoorva@gmail.com",
+        "event": "Coding Competition",
+        "message": "hii"
+    },
+    {
+        "studentId": "IITV-817786",
+        "name": "lucky",
+        "email": "lucky@gmail.com",
+        "event": "Sports Events",
+        "message": "hiii"
+    },
+    {
+        "studentId": "IITV-793284",
+        "name": "diya",
+        "email": "diya@gmail.com",
+        "event": "Dance Show",
+        "message": "hi"
+    }
+]

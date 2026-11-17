@@ -214,7 +214,7 @@ textarea {
 }
 
 button {
-    background: #75846A;
+    background: #645040;
     color: white;
     border: none;
     padding: 12px;
@@ -543,4 +543,84 @@ figure::before {
 
 #data-format-results p {
     overflow-wrap: anywhere;
+}
+
+/* Student ID Search */
+#student-finder {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #FFFCF7;
+    border: 1px solid #E5D9C8;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(64, 51, 41, 0.08);
+    box-sizing: border-box;
+}
+
+#student-finder h2 {
+    text-align: center;
+    color: #6B503D;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+#student-id-search {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#search-student {
+    padding: 13px 28px;
+    background: #6B503D;
+    color: white;
+    border-radius: 8px;
+}
+
+#search-student:hover {
+    background: #403329;
+}
+
+/* Registration Details */
+#student-result {
+    margin-top: 20px;
+    padding: 20px;
+    background: #F7F3EC;
+    border: 1px solid #E5D9C8;
+    border-radius: 10px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* Useful Event Information */
+.extra-info {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 30px;
+    background: #FFFCF7;
+    border: 1px solid #E5D9C8;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.extra-info h2 {
+    margin-bottom: 25px;
+}
+
+.extra-info h3 {
+    color: #6B503D;
+    margin-bottom: 8px;
+}
+
+.extra-info p {
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    #student-finder,
+    .extra-info {
+        width: 94%;
+        padding: 18px;
+    }
 }
